@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="kPrefix">
+    <file>icon/floatMask.png</file>
+  </qresource>
+</RCC>
