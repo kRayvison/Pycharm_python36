@@ -19,6 +19,68 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* === Shared === */
+* {
+    background-color: #333333;
+    color: #BBBBBB;
+    font-family: &quot;Segoe UI&quot;;
+}
+
+/* === QWidget === */
+QWidget:window {
+    background: #333333;
+    color: #BBBBBB;
+    font-family: &quot;Segoe UI&quot;;
+
+}
+
+/* === QPushButton === */
+QPushButton {
+    border: 1px solid #4f4f4f;
+    padding: 4px;
+    min-width: 65px;
+    min-height: 12px;
+
+}
+
+
+/* =================== */
+QLineEdit, QListView, QTreeView, QTableView, QAbstractSpinBox {
+    background-color: rgb(66, 66, 66);
+    color: #000;
+    border: 1px solid #555;
+}
+
+QAbstractScrollArea, QLineEdit, QTextEdit, QAbstractSpinBox, QComboBox {
+    border: 1px solid #555;
+    color:rgb(200, 200, 200);
+}
+
+/* === QHeaderView === */
+QHeaderView::section {
+    height: 20px;
+}
+
+QHeaderView::section {
+    background: rgb(55, 55, 55);
+    border: 0;
+    /*字体颜色*/
+    color: rgb(200, 200, 200);
+    padding-left: 4px;
+}
+
+
+
+
+QTableWidget{
+    background: rgb(55, 55, 55);
+    selection-background-color: rgb(77, 77, 77);
+    font-family: &quot;Segoe UI&quot;;
+
+}
+</string>
+  </property>
   <property name="animated">
    <bool>true</bool>
   </property>
@@ -32,6 +94,9 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <layout class="QHBoxLayout" name="ID_horizontalLayout">
@@ -114,8 +179,8 @@
        <widget class="QPushButton" name="Get_Button">
         <property name="minimumSize">
          <size>
-          <width>0</width>
-          <height>0</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -247,6 +312,9 @@
       </item>
       <item>
        <widget class="QTableWidget" name="Plugins_tableWidget">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <column>
          <property name="text">
           <string>Name</string>
@@ -328,8 +396,8 @@
        <widget class="QPushButton" name="Input_Button">
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>30</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -347,8 +415,8 @@
        <widget class="QPushButton" name="Output_Button">
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>30</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -366,8 +434,8 @@
        <widget class="QPushButton" name="Preferences_Button">
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>30</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -385,8 +453,8 @@
        <widget class="QPushButton" name="PreRender_Button">
         <property name="minimumSize">
          <size>
-          <width>120</width>
-          <height>30</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -421,8 +489,8 @@
        <widget class="QPushButton" name="Maya_Button">
         <property name="minimumSize">
          <size>
-          <width>0</width>
-          <height>25</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -440,8 +508,8 @@
        <widget class="QPushButton" name="CMD_Button">
         <property name="minimumSize">
          <size>
-          <width>0</width>
-          <height>25</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -459,8 +527,8 @@
        <widget class="QPushButton" name="Close_Button">
         <property name="minimumSize">
          <size>
-          <width>0</width>
-          <height>25</height>
+          <width>75</width>
+          <height>22</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -484,7 +552,7 @@
      <x>0</x>
      <y>0</y>
      <width>567</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

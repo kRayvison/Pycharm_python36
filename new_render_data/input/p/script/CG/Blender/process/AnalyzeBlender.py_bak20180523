@@ -1,0 +1,68 @@
+import os,sys,subprocess,string,logging,time,shutil
+import logging
+from RenderBase import RenderBase
+from CommonUtil import RBCommon as CLASS_COMMON_UTIL
+
+class AnalyzeBlender(RenderBase):
+    def __init__(self, **param_dict):
+        RenderBase.__init__(self, **param_dict)
+        print("Blender.INIT")
+        #self.G_CG_VERSION=''
+
+    def RBhanFile(self):#3 copy script,copy from pool,#unpack
+        self.G_DEBUG_LOG.info('[Blender.RBhanFile.start.....]')
+
+        self.G_DEBUG_LOG.info('[Blender.RBhanFile.end.....]')
+        
+    def RBconfig(self):#5
+        self.G_DEBUG_LOG.info('[Blender.RBconfig.start.....]')
+        self.G_DEBUG_LOG.info('[Blender.RBconfig.end.....]')
+    
+    def RBanalyse(self):#7
+        self.G_DEBUG_LOG.info('[Blender.RBanalyse.start.....]')
+        
+        netFile = os.path.join(self.G_WORK_TASK,(self.G_CG_TXTNAME+'_net.txt'))
+        netFile=netFile.replace('\\','/')
+
+        myCgVersion = self.G_CG_NAME+"-"+self.G_CG_VERSION
+        checkPy=r'C:/script/new_py/CG/Blender/script/check.py'
+        exePath=os.path.join(r'B:/plugins/blender/Blender Foundation',myCgVersion,r'blender.exe')
+
+        analyseCmd='"'+exePath+'" -b "'+self.G_INPUT_CG_FILE+'" -P '+checkPy+' -- "'+netFile+'" '
+        CLASS_COMMON_UTIL.cmd(analyseCmd, my_log=self.G_DEBUG_LOG, continue_on_error=True)
+        self.G_DEBUG_LOG.info(analyseCmd)
+        #self.RBcmd(analyseCmd,True,False)
+        self.G_DEBUG_LOG.info('[Blender.RBanalyse.end.....]')
+
+    def webNetPath(self):
+        if os.path.exists(self.G_CONFIG):
+            configJson=eval(open(self.G_CONFIG, "r").read())
+            self.G_INPUT_CG_FILE=configJson['common']["cgFile"]
+            self.G_CG_NAME=configJson['common']["cgSoftName"]
+            self.G_CG_VERSION=configJson['common']["cgv"]
+            self.G_INPUT_PROJECT_PATH= configJson['common']["projectSymbol"]
+            replacePath="\\"+self.G_INPUT_PROJECT_PATH+"\\"+self.G_CG_NAME+"\\"
+            print(configJson)
+            if isinstance(configJson["mnt_map"],dict):
+                self.RBcmd("net use * /del /y")
+                for key in configJson["mnt_map"]:
+                    newPath =configJson["mnt_map"][key].replace("/","\\").replace(replacePath,"\\")
+                    # self.RBcmd("net use "+key+" "+newPath)
+                    self.RBcmd("net use "+key+" \""+newPath+"\"")
+        
+    def RBexecute(self):#Render
+        self.G_DEBUG_LOG.info('[Blender.RBexecute.start.....]')
+        self.RBBackupPy()
+        self.RBinitLog()
+        self.RBmakeDir()
+        self.delSubst()
+        self.webNetPath()
+        self.RBprePy()
+        self.RBcopyTempFile()#copy py.cfg Blender file
+        self.RBreadCfg()
+        self.RBhanFile()
+        self.RBconfig()        
+        self.RBanalyse()
+        self.RBpostPy()
+        self.RBhanResult()
+        self.G_DEBUG_LOG.info('[Blender.RBexecute.end.....]')

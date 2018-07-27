@@ -1,0 +1,39 @@
+------------texture-----------------
+鏅鸿兘瀹為獙瀹�tif
+uni.tif
+hitalk.tif
+灞�png
+灞�.jpeg
+------------Image Size-----------------
+Width:4000
+Height:800
+------------Render Frame-----------------
+Start frame:84
+End frame:800
+Project_fps:25
+Render_Settings_fps:25
+------------Render Format-----------------
+RI_Format:PNG
+MP_Format:PNG
+------------Multi-Pass-----------------
+MultiPassName:Post Effects
+MultiPassName:鍏ㄥ眬鍏夌収
+MultiPassName:鐜鍚告敹
+MultiPassName:楂樺厜
+MultiPassName:鎶曞奖
+MultiPassName:娣卞害
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+MultiPassName:瀵硅薄缂撳瓨
+------------camera-----------------
+cameraName:Camera
+------------RFMesh_name_path-----------------
+------------RFParticle_name_path-----------------

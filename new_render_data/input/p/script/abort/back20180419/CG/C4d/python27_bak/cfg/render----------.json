@@ -1,0 +1,50 @@
+{
+-"common": {
+"renderType": "cpu",
+"multiPass": "1",
+"outputLabel": "_c14_15b",
+"cgv": "R17",
+"iformat": "TIFF",
+"cgSoftName": "CINEMA 4D",
+"projectId": 52708,
+"costPath": "\\\\10.60.100.101\\o5\\fee",
+"smallPath": "//10.60.100.202/d/small5/1857500/1857835/9525478/",
+"userOutputPath": "\\\\10.60.100.202\\d\\outputdata5\\1857500\\1857835\\9525478_c14_15b",
+"inputCgFile": "\\\\10.60.100.104\\d\\inputdata5\\1857500\\1857835\\D\\c14_15b\\c14_15b.c4d",
+"userId": 1857835,
+"taskId": 9525478,
+"submitFrom": "web",
+"imageHeight": "800",
+"denoise": "0",
+"renderModel": "1",
+"singelFrameCheck": "//10.60.100.101/p5/tools/SingleFrameCheck.exe",
+"analyseTxt": "\\\\10.60.100.101\\p5/config/1857500/1857835/9525478/analyse_net.txt",
+"outputFileName": "c14_15b.c4d",
+"inputUserPath": "\\\\10.60.100.104\\d\\inputdata5\\1857500\\1857835\\",
+"inputFile": "\\\\10.60.100.104/d/inputdata5/1857500/1857835/D/c14_15b/c14_15b.c4d",
+"cgFile": "F:/c14_15b/c14_15b.c4d",
+"noOutput": "0",
+"cgVersion": "R17",
+"projectSymbol": "defaultProject",
+"imageWidth": "4000",
+"zone": 1,
+"inputProject": "\\\\10.60.100.104\\d\\inputdata5\\1857500\\1857835",
+"tilesPath": "\\\\10.60.100.104\\d\\inputdata5\\1857500\\1857835\\tiles\\9525478"
+},
+-"mntMap": {
+"B:": "//10.60.100.151/td",
+"E:": "\\\\10.60.100.104\\d\\inputdata5\\1857500/1857835\\E",
+"F:": "\\\\10.60.100.104\\d\\inputdata5\\1857500/1857835\\D"
+},
+-"mappings": {
+"D:": "F:",
+"e:": "E:",
+"d:": "F:",
+"E:": "E:"
+},
+-"renderSettings": {
+"renderableLayer": "",
+"renderableCamera": "",
+"projectPath": "F:/c14_15b/"
+}
+}

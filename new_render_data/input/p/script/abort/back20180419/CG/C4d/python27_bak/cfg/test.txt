@@ -1,0 +1,189 @@
+﻿"c:\python27\python" "c:\work\render\111\cfg\script_analyze.py" "2017082500021" "0" "frame_analyse_1111352" "11252855482128" "GB116"
+"c:\python27\python" "c:\work\render\111\cfg\script_render.py" "2017082500021" "0" "frame_analyse_1111352" "11252855482128" "GB116"
+
+
+新流程：
+要改的：
+1、C4Dplugin封装
+2、RenderC4d.py #215行 封装到C4dUtil下的
+参考maxutil的
+@classmethod
+    def max_cmd_callback(self,my_popen,my_log):
+
+
+
+
+(注意)
+前台工程路径不需要选项
+默认是以.c4d目录的上一层设置为工程目录
+如：
+E:\abc\aa.c4d
+客户选择aa.c4d之后默认的工程目录设为E:\abc
+
+
+
+\\10.60.100.101\p5\script2\User\119614\C4D
+
+\\10.60.100.104\new_render_data\input\p\config\100000\100001\111\cfg
+\\10.60.100.104\new_render_data\input\p\script\CG
+
+net use F: \\10.60.100.104\new_render_data\input\d\render_data\100000\100001\F
+
+
+"C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -render "F:\R18_test.c4d" -frame 1 1 1 -oresolution 64 36 -oformat PNG -oimage "c:\work\render\111\output\R18_test.PNG"
+"C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -noopengl -nogui -frame 25 25 1  -render "F:\R18_test.c4d" -oresolution 800 600  -oformat "TIFF(PSD Layers)" -oimage "c:\work\render\111\output\aaaaa.TIFF(PSD Layers)"
+
+Cmd: "C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -noopengl -nogui -frame 25 25 1  -render "F:\R18_test.c4d" -oresolution 800 600  -oformat "TIFF(PSD Layers)" -oimage "c:\work\render\111\output\R18_test.TIFF(PSD Layers) -oMulti-Pass "{}" >>C:\log\render\111\Render_111281_render.log
+
+json copybak:
+
+from:C:\work\render\111\cfg
+to:\\10.60.100.104\new_render_data\input\p\config\100000\100001\111\cfg
+
+运行分析执行的是config路径下的task.json
+
+
+RenderC4d.py
+渲染命令:
+"C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -noopengl -nogui  -frame 25 25 -render "F:\R18_test.c4d" -oresolution 800 600 -oformat TIFF(PSD Layers) -oimage "c:\work\render\111\output\R18_test.c4d"
+#multipass:0
+"C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -noopengl -nogui -start:25 -end:25 -nthFrame:1 -render "F:\R18_test.c4d" -w:800 -h:600 -oformat: TIFF(PSD Layers) -oimage: "c:\work\render\111\output\R18_test.c4d"
+#multipass:1
+"C:\Program Files\MAXON\CINEMA 4D R18\CINEMA 4D 64 Bit.exe" -noopengl -nogui -start:25 -end:25 -nthFrame:1 -render "F:\R18_test.c4d" -w:64 -h:36 -oformat:PNG -oimage:"c:\work\render\111\output\R18_test.PNG" >>C:\log\render\111\Render_111281_render.log
+=======================================================================================================================================
+AnalysisC4D.py--AnalyzeC4d.py
+
+分析命令行:
+"C:/Program Files/MAXON/CINEMA 4D R18/CINEMA 4D.exe" -task_id=111 -cg_file="\\10.60.100.104\new_render_data\input\d\render_data\100000\100001\F\R18_test.c4d" -task_json="c:\work\render\111\cfg\task.json" -asset_json="c:\work\render\111\cfg\asset.json" -tips_json="c:/work/render/111/cfg/tips.json"
+
+pyp位置:
+C:/users/enfuzion/AppData/Roaming/MAXON/CINEMA 4D %s/plugins/ 
+
+
+------------------------------------------------------------------------
+
+1.
+render.json--task.json(映射怎么来)
+
+def RB_CONFIG(self):#5
+        self.G_DEBUG_LOG.info('[Max.RBconfig.start.....]')
+        
+        '''
+        clean_mount_from='net use * /del /y'
+        CLASS_COMMON_UTIL.cmd(clean_mount_from,try_count=3)
+        if not os.path.exists(r'B:\plugins'):
+            cmd='net use B: '+self.G_PLUGIN_PATH.replace('/','\\').replace("10.60.100.151","10.60.100.152")
+            CLASS_COMMON_UTIL.cmd(cmd,try_count=3)
+
+2.3rdPartyShaders 从哪里来
+
+{"plugins":{},"renderSoftware":"houdini","softwareVer":"16","3rdPartyShaders":{}}
+
+
+getNode(do it)
+renderSoftware--task.json-software_config()
+myCgVersion--task.json-software_config
+self.G_PLUGINS ---- task.json-software_config
+plugin = C4DPlugin() ---C4DPluginManager.py
+self.G_ANALYSE_LOG -- AnalysisBase.py 传参（新的改为AnalyzeBase.py）
+
+
+
+
+
+\\10.60.2.116\d$\work\render\111
+\\10.60.100.104\new_render_data\input\d\render_data\100000
+\\10.60.100.104\new_render_data\input\p\script
+
+http://10.60.96.133:8090/pages/viewpage.action?pageId=2097972#id-脚本规范-1）主流程方法
+
+\\10.60.96.110\software（软件位置）
+
+贴图思路：
+1、等分析文件关闭之后f.close（）。(已完成)
+2、解析分析文本analyse_net.txt下的贴图路径
+(1, '_Marble_.jpg')
+(2, 'E:\\archmodels58_030_maple_leaf_diffuse.jpg')
+(3, 'A008_C043_0101GR_V1-0001_00000.png')
+(4, 'Archmodels61_peonia_flower_diffuse.jpg')
+(5, '0\xe5\xb0\x8f\xe5\x8c\xba\xe4\xb8\x93\xe7\x94\xa8\xe8\xa1\x8c\xe4\xba\xba\xe9\x81\x93\xe9\x93\xba\xe5\x9c\xb0.JPG')
+
+1、凡是带有路径的就有问题，显示为1，
+(2, 'E:\\archmodels58_030_maple_leaf_diffuse.jpg')
+1）拿出来和工程目录下的贴图进行对比
+2）看看是不是在tex文件夹下，如果不是就报错，反之就过。
+
+2、只显示贴图名称的就正常，显示为0
+(3, 'A008_C043_0101GR_V1-0001_00000.png')
+(4, 'Archmodels61_peonia_flower_diffuse.jpg')
+
+SCENE
+\\10.60.100.101\d\inputdata5\119500\119614(w2)
+\\10.60.100.104\stg_data\input\d\inputdata5\1950500\1950812(w0)
+\\10.90.100.101\d\inputdata5\(gpu)
+
+script:
+\\10.60.100.101\p5\script2(new)
+\\10.60.100.101\p5\script2\User\119614\C4D
+\\10.90.96.51\td1\plugins\C4D\script(gpu-B)
+\\10.90.100.101\p5\script2\C4D(gpu)
+
+w5:\\10.50.244.116\p5\script\py\py\common
+w2:\\10.60.100.101\p5\script\py\py\common
+w8:\\10.70.242.102\p5\script\py\py\common
+w9:\\10.80.100.101\p5\script\py\py\common
+
+------------------------------------------------------------------------
+
+1. C4DPluginManager.py  test:
+
+C:\Python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager.py" "realflow" "2015" "CINEMA 4D R16" "ABCDEF"
+
+C:\Python27\python.exe "B:\plugins\C4D\script\C4DPluginManager.py" "realflow" "2015" "CINEMA 4D R16" "ABCDEF"
+
+------------------------------------------------------------------------
+2. Analys.pyp   test:
+
+{"plugins":{"c4dtoa":"1.5.2.0"},"renderSoftware":"CINEMA 4D","softwareVer":"R17","3rdPartyShaders":{}}
+B:\plugins\C4D\script\C4D.bat "CINEMA 4D R17" "72322" "T:/195_NOVA/_mg/Jason/for_renderbus/Green_v008/Green_leaf_05_v009.c4d" "C:/WORK/helper/72322/analyse_net.txt"
+
+====================
+#.tx test
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R18" "129063" "F:/Jason/4_4_qinshi/4_4_qinshi4.c4d" "C:/WORK/helper/129063/analyse_net.txt" 
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R18" "129199" "E:/02_PAYPE/NORIN/ending_line/ending_line_0001.c4d" "C:/WORK/helper/129199/analyse_net.txt"
+
+
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R17" "72322" "T:/195_NOVA/_mg/Jason/for_renderbus/Green_v008/Green_leaf_05_v009_test.c4d" "C:/WORK/helper/72322/analyse_net.txt"
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R15" "114653" "E:/JD/SC0004/SC0004ername.c4d" "C:/WORK/helper/114653/analyse_net.txt" 
+====================
+#R13-test
+net use K: \\10.50.1.20\td\huling\scene\C4D_scene\R13_R18_test
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R13" "114655" "K:\R13_test.c4d" "C:/WORK/helper/114655/analyse_net.txt" 
+====================
+#mov test/贴图名称空格
+subst X: D:\HL\X
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R18" "6975" "X:\shandongfinal\shandong\shandong.c4d" "C:/WORK/helper/6975/analyse_net.txt"
+====================
+#chinese test
+subst X: D:\HL\X
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R18" "6976" "X:\zhongbiao\zhongbiao.c4d" "C:/WORK/helper/6976/analyse_net.txt"
+
+====================
+
+3.realflow  --test:
+net use V: \\10.60.100.101\d\inputdata5\119500\119614\V
+\\10.60.100.101\p5\script2\User\119614\C4D\a0000\C4D.bat "CINEMA 4D R16" "115766" "V:/167596/MainLogo_02_0003_new.c4d" "C:/WORK/helper/115766/analyse_net.txt"
+ 
+-------------------------------------------------------------------------
+C:\python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager_test.py"  "realflow" "1.0.2.0096" "CINEMA 4D R17" "ABCDEF"
+C:\python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager.py" "vray" "3.4" "CINEMA 4D R18" "ABCDEF"
+C:\python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager_test.py"  "AixSplineOnSpline" "1" "CINEMA 4D R18" "ABCDEF"
+C:\python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager_test.py" "hdri_browser" "2.142" "CINEMA 4D R18" "ABCDEF"
+
+
+C:\python27\python.exe "\\10.60.100.101\p5\script2\User\119614\C4D\C4DPluginManager.py" "octane_GPU" "3.05.3" "CINEMA 4D R18" "ABCDEF"
+
+B:\plugins\C4D\vray\vray_3.4\CINEMA 4D R17;B:\plugins\C4D\turbulencefd\turbulencefd_1.0.1419\CINEMA 4D R17;
+
+
+C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common

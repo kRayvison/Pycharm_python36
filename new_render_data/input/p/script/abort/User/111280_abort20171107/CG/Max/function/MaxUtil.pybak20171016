@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+#encoding:utf-8
+# -*- coding: utf-8 -*-
+import os
+import subprocess
+# class FileHandle
+from CommonUtil import RBCommon as CLASS_COMMON_UTIL
+
+class RBMaxUtil(object):
+    
+    
+    @classmethod
+    def kill_max(self,parent_id=None,my_log=None):
+        print ('parent_id='+str(parent_id))
+        if parent_id==None:
+            CLASS_COMMON_UTIL.log_print(my_log,'kill all 3dsmaxcmd')
+            try:
+                os.system('taskkill /F /IM 3dsmax.exe /T')
+            except  Exception, e:
+                CLASS_COMMON_UTIL.log_print(my_log,'taskkill 3dsmax.exe exeception')
+                CLASS_COMMON_UTIL.log_print(my_log,e)
+        else:
+            cmd_str='wmic process where name="3dsmax.exe" get Caption,ParentProcessId,ProcessId'
+            print cmd_str
+            cmdp=subprocess.Popen(cmd_str,shell = True,stdout = subprocess.PIPE, stderr = subprocess.STDOUT)
+            while True:
+                buff = cmdp.stdout.readline().strip()
+                if buff == '' and cmdp.poll() != None:
+                    break
+                if buff!=None and buff!='' :
+                    
+                    CLASS_COMMON_UTIL.log_print(my_log,'max process info...')
+                    CLASS_COMMON_UTIL.log_print(my_log,buff)
+                        
+                    try:
+                        buffArr=buff.split()
+                        print str(buffArr)
+                        if int(buffArr[1])==parent_id:
+                            print 'kill...'+buff
+                            os.system("taskkill /f /pid %s" % (buffArr[2]))
+                    except  Exception, e:
+                        CLASS_COMMON_UTIL.log_print(my_log,'taskkill 3dsmax.exe exeception')
+                        CLASS_COMMON_UTIL.log_print(my_log,e)
+                
+        try:
+            os.system('taskkill /F /IM 3dsmaxcmd.exe /T')
+        except  Exception, e:
+            CLASS_COMMON_UTIL.log_print(my_log,'taskkill 3dsmaxcmd.exe exeception')
+            CLASS_COMMON_UTIL.log_print(my_log,e)
+        CLASS_COMMON_UTIL.log_print(my_log,'maxKill...end...\n')
+        
+    
+    @classmethod
+    def max_cmd_callback(self,my_popen,my_log):
+    
+        while my_popen.poll()==None:
+            result_line = my_popen.stdout.readline().strip()
+            if result_line=='' :
+                continue
+            CLASS_COMMON_UTIL.log_print(my_log,result_line)
+            
+            if '[_____KILL MAX_____]' in result_line:
+                self.kill_max(my_popen.pid,my_log)
+                CLASS_COMMON_UTIL.log_print(my_log,'\n\n-------------------------------------------End max program-------------------------------------------\n\n')
+            
+    @classmethod
+    def max_cmd____aobrt(self,cmd_str,my_log=None,continue_on_error=False,my_shell=False):#continueOnErr=true-->not exit ; continueOnErr=false--> exit 
+        print str(continue_on_error)+'--->>>'+str(my_shell)
+        if my_log!=None:
+            my_log.info(cmd_str)
+            my_log.info("\n\n-------------------------------------------Start max program-------------------------------------\n\n")
+        
+        cmdp=subprocess.Popen(cmd_str,stdin = subprocess.PIPE,stdout = subprocess.PIPE, stderr = subprocess.STDOUT, shell = my_shell)
+        #cmdp.stdin.write('3/n')
+        #cmdp.stdin.write('4/n')
+        while True:
+            resultLine = cmdp.stdout.readline().strip()
+            if resultLine == '' and cmdp.poll()!=None:
+                break
+            if my_log!=None:    
+                my_log.info(resultLine)
+            
+            if '[_____KILL MAX_____]' in resultLine:
+                self.kill_max(cmdp.pid)
+                if my_log!=None:
+                    my_log.info("\n\n-------------------------------------------End max program-------------------------------------\n\n")
+        resultStr = cmdp.stdout.read()
+        resultCode = cmdp.returncode
+        
+        if my_log!=None:
+            my_log.info('resultStr...'+resultStr)
+            my_log.info('resultCode...'+str(resultCode))
+        
+        if not continue_on_error:
+            if resultCode!=0:
+                sys.exit(resultCode)
+        return resultStr

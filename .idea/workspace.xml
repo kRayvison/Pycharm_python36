@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pycharm_python36$untitled__1_.coverage" NAME="untitled (1) Coverage Results" MODIFIED="1532318441982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$Task_win.coverage" NAME="Task_win Coverage Results" MODIFIED="1532428979925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$Task_win.coverage" NAME="Task_win Coverage Results" MODIFIED="1532602025211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$k_fristQT11.coverage" NAME="k_fristQT11 Coverage Results" MODIFIED="1532309077878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pyside" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$Task.coverage" NAME="Task Coverage Results" MODIFIED="1532341882371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$test_qt.coverage" NAME="test_qt Coverage Results" MODIFIED="1532081976576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
@@ -19,6 +19,9 @@
     <SUITE FILE_PATH="coverage/Pycharm_python36$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1532085138140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$test_build_ui.coverage" NAME="test_build_ui Coverage Results" MODIFIED="1532085237944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$analysis_cfg.coverage" NAME="analysis_cfg Coverage Results" MODIFIED="1532415968518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Pycharm_python36" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -35,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
-              <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -52,8 +55,8 @@
       <file leaf-file-name="k_fristQT11.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pyside/k_fristQT11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+            <state relative-caret-position="311">
+              <caret line="300" column="8" selection-start-line="300" selection-start-column="8" selection-end-line="300" selection-end-column="19" />
               <folding>
                 <element signature="e#24#50#0" expanded="true" />
               </folding>
@@ -64,8 +67,8 @@
       <file leaf-file-name="analysis_cfg.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="594">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -73,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task_win.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Task_win.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="308">
+              <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -85,11 +88,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RenderBase.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="Task.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="188" column="37" selection-start-line="188" selection-start-column="37" selection-end-line="188" selection-end-column="37" />
+            <state relative-caret-position="5478">
+              <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -115,11 +123,17 @@
       <find>cleartabItem</find>
       <find>self.k_tabWidget</find>
       <find>QTableWidgetItem</find>
-      <find>QLineEdit</find>
       <find>QFileInfo</find>
       <find>k_getfile</find>
       <find>self.k_convert</find>
       <find>self.kthread</find>
+      <find>self.kop</find>
+      <find>self.kcl</find>
+      <find>kop</find>
+      <find>QLineEdit</find>
+      <find>hide</find>
+      <find>kcl</find>
+      <find>analysisMapping</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,7 +187,37 @@
             <path>
               <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
-              <item name="Pyside" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="Base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
@@ -344,15 +388,15 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" visible="true" weight="0.26836735" />
+      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" visible="true" weight="0.26836735" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8089261" visible="true" weight="0.15123789" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.19107392" side_tool="true" visible="true" weight="0.15123789" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,7 +480,7 @@
     <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -454,13 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="188" column="37" selection-start-line="188" selection-start-column="37" selection-end-line="188" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pyside/k_frist4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
@@ -470,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pyside/k_fristQT11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        <state relative-caret-position="311">
+          <caret line="300" column="8" selection-start-line="300" selection-start-column="8" selection-end-line="300" selection-end-column="19" />
           <folding>
             <element signature="e#24#50#0" expanded="true" />
           </folding>
@@ -480,23 +517,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="594">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5478">
+          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="308">
+          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

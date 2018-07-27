@@ -1,0 +1,59 @@
+{
+	"miscellaneous": {
+		"sub_from": "web",
+		"render_type": "cpu",
+	},
+	"system_info": {
+		"common": {
+            "temp_path": "//10.60.100.102/d/temp/1111387",
+            "tiles_path": "",
+			"channel": "1",
+			"input_project_path": "//10.60.100.104/new_render_data/input/d/render_data/100000/100001/F",
+			"userId": 100001,
+            "taskId": "1111387",
+			"config_path": "//10.60.100.104/new_render_data/input/p/config/100000/100001/1111387/cfg/",
+			"plugin_path": "//10.60.100.151//td",
+			"platform": "2",
+			"input_user_path": "//10.60.100.104/new_render_data/input/d/render_data/100000/100001/F",
+			"user_id": "100001",
+			"zone": "1",
+			"input_cg_file": "//10.60.100.104/new_render_data/input/d/render_data/100000/100001/F/R18_test.c4d",
+			"output_user_path": "//10.60.100.104/new_render_data/output/d/render_data/100000/100001/1111387_c4d",
+            "small_Path": "//10.60.100.104/new_render_data/input/d/small_pic/100000/100001/1111387"
+        },
+        "mnt_map":{
+            "F:": "//10.60.100.104/new_render_data/input/d/render_data/100000/100001/F"
+        },
+        "mappings": {
+            "F:": "F:",
+            }
+    },
+    "scene_info_render": {
+		"renderer": {
+
+		},
+		"common": {
+			"kg": "0",
+			"frames": "25",
+			"output_file_type": ".tif",
+			"element_type": "tga",
+			"MultiPassName": "Post Effects",
+			"output_file": "c4dtest.tif",
+			"cgv": "CINEMA 4D R18",
+			"output_file_basename": "c4dtest",
+			"all_camera": "",
+			"imageWidth": "640",
+			"renderable_camera": "",
+			"imageHeight": "480"
+		}
+	},
+	"software_config": {
+		"plugins": {
+
+		},
+		"cg_version": "R18",
+		"cg_name": "CINEMA 4D"
+	},
+	"scene_info": {
+    }
+}

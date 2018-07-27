@@ -1,0 +1,80 @@
+#!/usr/bin/python
+# -*-coding:utf-8-*-
+
+import os
+#import imghdr
+import sys
+
+class  RBFrameChecker():
+
+
+    def getFileSize(self,localpath,serverpath):
+        localpath = localpath.replace("\\","/")
+        serverpath = serverpath.replace("\\","/")
+        #print serverpath
+        checkfile = []
+        if os.path.exists(serverpath):
+            for root, dirs, files in os.walk(localpath):
+                for filename in files:
+                    if filename.split('.')[-1]!="db":
+                        localfiles = os.path.join(root, filename).replace("\\", "/")
+
+                        if not os.path.isdir(os.path.join(root,filename)):
+                            localfilesize = os.path.getsize(os.path.join(root,filename))
+                            serverfiles = serverpath+os.path.join(root,filename).split(localpath)[-1].replace("\\","/")
+
+                            if os.path.exists(serverfiles):
+                                serverfilesize = os.path.getsize(serverfiles)
+
+                                if float(localfilesize)/1024>3:
+                                    if localfilesize != serverfilesize:
+                                        print ("Not the same as the file size：\n"+"    local: \""+str(localfiles)+"\"      size:"+str(localfilesize)+"\n    server: \""+str(serverfiles)+"\"      size:"+str(serverfilesize)+"\n")
+                                    else:
+                                        #print "nuke____",localfiles
+                                        checkfile.append(localfiles)
+                                else:
+                                    print ("This file \"" + localfiles + "\" size abnormal !\n")
+                            else:
+                                print ("This file \""+localfiles+"\" not in server path !\n")
+
+        self.check_texture(nukepath, checkfile)
+
+
+    def check_texture(self,nuke_path,texture_file):
+
+        runpath = nuke_path
+        #print texture_file
+        #print  "________",runpath
+        os.environ['HFS'] = runpath
+        _PATH_ORG = os.environ.get('PATH')
+        os.environ['PATH'] = (_PATH_ORG if _PATH_ORG else "") + r";" + runpath
+        #print os.environ['PATH']
+        libpath = "%s/lib" % (runpath)
+        # _PATH_New = os.environ.get('PATH')
+        # print "_PATH_New = " + _PATH_New
+        sitepath = "%s/lib/site-packages" % (runpath)
+        if libpath not in sys.path:
+            sys.path.append(libpath)
+        if sitepath not in sys.path:
+            sys.path.append(sitepath)
+
+        import nuke
+
+        for i in texture_file :
+            texture_tpye = ["avi", "eps", "dds", "bmp", "vrimg"]
+            if i.split(".")[-1] not in texture_tpye:
+                #print i
+                readtex = nuke.nodes.Read(file=i.decode("gb2312").encode("utf-8"))
+                if readtex.metadata() == {}:
+                    print "File is damaged"+i
+                else:
+                    pass
+            else:
+                print " This file does not support Nuke do check"+i
+
+
+
+
+nukepath =r"C:/Program Files/Nuke10.0v4"
+CLASS_FRAME_CHECKER = RBFrameChecker()
+CLASS_FRAME_CHECKER.getFileSize(r"G:\\BitmapCheck",r"//172.16.10.88/test/WF/BitmapCheck")

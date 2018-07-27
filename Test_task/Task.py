@@ -14,11 +14,72 @@ class Ui_MainWindow(object):
         MainWindow.resize(567, 675)
         MainWindow.setStatusTip("")
         MainWindow.setAutoFillBackground(False)
+        MainWindow.setStyleSheet("/* === Shared === */\n"
+"* {\n"
+"    background-color: #333333;\n"
+"    color: #BBBBBB;\n"
+"    font-family: \"Segoe UI\";\n"
+"}\n"
+"\n"
+"/* === QWidget === */\n"
+"QWidget:window {\n"
+"    background: #333333;\n"
+"    color: #BBBBBB;\n"
+"    font-family: \"Segoe UI\";\n"
+"\n"
+"}\n"
+"\n"
+"/* === QPushButton === */\n"
+"QPushButton {\n"
+"    border: 1px solid #4f4f4f;\n"
+"    padding: 4px;\n"
+"    min-width: 65px;\n"
+"    min-height: 12px;\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"/* =================== */\n"
+"QLineEdit, QListView, QTreeView, QTableView, QAbstractSpinBox {\n"
+"    background-color: rgb(66, 66, 66);\n"
+"    color: #000;\n"
+"    border: 1px solid #555;\n"
+"}\n"
+"\n"
+"QAbstractScrollArea, QLineEdit, QTextEdit, QAbstractSpinBox, QComboBox {\n"
+"    border: 1px solid #555;\n"
+"    color:rgb(200, 200, 200);\n"
+"}\n"
+"\n"
+"/* === QHeaderView === */\n"
+"QHeaderView::section {\n"
+"    height: 20px;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background: rgb(55, 55, 55);\n"
+"    border: 0;\n"
+"    /*字体颜色*/\n"
+"    color: rgb(200, 200, 200);\n"
+"    padding-left: 4px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"QTableWidget{\n"
+"    background: rgb(55, 55, 55);\n"
+"    selection-background-color: rgb(77, 77, 77);\n"
+"    font-family: \"Segoe UI\";\n"
+"\n"
+"}\n"
+"")
         MainWindow.setAnimated(True)
         MainWindow.setDocumentMode(False)
         MainWindow.setDockNestingEnabled(False)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -46,7 +107,7 @@ class Ui_MainWindow(object):
         spacerItem1 = QtWidgets.QSpacerItem(100, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.ID_horizontalLayout.addItem(spacerItem1)
         self.Get_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Get_Button.setMinimumSize(QtCore.QSize(0, 0))
+        self.Get_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Get_Button.setMaximumSize(QtCore.QSize(60, 25))
         self.Get_Button.setObjectName("Get_Button")
         self.ID_horizontalLayout.addWidget(self.Get_Button)
@@ -90,6 +151,7 @@ class Ui_MainWindow(object):
         self.Plugins_verticalLayout.addItem(spacerItem4)
         self.Plugins_horizontalLayout.addLayout(self.Plugins_verticalLayout)
         self.Plugins_tableWidget = QtWidgets.QTableWidget(self.centralwidget)
+        self.Plugins_tableWidget.setStyleSheet("")
         self.Plugins_tableWidget.setObjectName("Plugins_tableWidget")
         self.Plugins_tableWidget.setColumnCount(2)
         self.Plugins_tableWidget.setRowCount(0)
@@ -126,22 +188,22 @@ class Ui_MainWindow(object):
         self.path_horizontalLayout.setContentsMargins(-1, 10, -1, -1)
         self.path_horizontalLayout.setObjectName("path_horizontalLayout")
         self.Input_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Input_Button.setMinimumSize(QtCore.QSize(120, 30))
+        self.Input_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Input_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.Input_Button.setObjectName("Input_Button")
         self.path_horizontalLayout.addWidget(self.Input_Button)
         self.Output_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Output_Button.setMinimumSize(QtCore.QSize(120, 30))
+        self.Output_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Output_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.Output_Button.setObjectName("Output_Button")
         self.path_horizontalLayout.addWidget(self.Output_Button)
         self.Preferences_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Preferences_Button.setMinimumSize(QtCore.QSize(120, 30))
+        self.Preferences_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Preferences_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.Preferences_Button.setObjectName("Preferences_Button")
         self.path_horizontalLayout.addWidget(self.Preferences_Button)
         self.PreRender_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.PreRender_Button.setMinimumSize(QtCore.QSize(120, 30))
+        self.PreRender_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.PreRender_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.PreRender_Button.setObjectName("PreRender_Button")
         self.path_horizontalLayout.addWidget(self.PreRender_Button)
@@ -151,24 +213,24 @@ class Ui_MainWindow(object):
         self.execute_horizontalLayout = QtWidgets.QHBoxLayout()
         self.execute_horizontalLayout.setObjectName("execute_horizontalLayout")
         self.Maya_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Maya_Button.setMinimumSize(QtCore.QSize(0, 25))
+        self.Maya_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Maya_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.Maya_Button.setObjectName("Maya_Button")
         self.execute_horizontalLayout.addWidget(self.Maya_Button)
         self.CMD_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.CMD_Button.setMinimumSize(QtCore.QSize(0, 25))
+        self.CMD_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.CMD_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.CMD_Button.setObjectName("CMD_Button")
         self.execute_horizontalLayout.addWidget(self.CMD_Button)
         self.Close_Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Close_Button.setMinimumSize(QtCore.QSize(0, 25))
+        self.Close_Button.setMinimumSize(QtCore.QSize(75, 22))
         self.Close_Button.setMaximumSize(QtCore.QSize(120, 16777215))
         self.Close_Button.setObjectName("Close_Button")
         self.execute_horizontalLayout.addWidget(self.Close_Button)
         self.verticalLayout_3.addLayout(self.execute_horizontalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 567, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 567, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)

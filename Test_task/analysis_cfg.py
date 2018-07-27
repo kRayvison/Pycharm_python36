@@ -29,7 +29,7 @@ class analysisCfg():
 
     def analysisPath(self):
         k_path = {}
-        k_path = (self.k_sys_json['common'] if self.k_sys_json['common'] else '')
+        k_path = (self.k_sys_json['system_info']['common'] if self.k_sys_json['system_info']['common'] else '')
 
         return k_path
 
