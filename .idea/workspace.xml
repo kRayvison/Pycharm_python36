@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pycharm_python36$untitled__1_.coverage" NAME="untitled (1) Coverage Results" MODIFIED="1532318441982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$Task_win.coverage" NAME="Task_win Coverage Results" MODIFIED="1532602025211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$Task_win.coverage" NAME="Task_win Coverage Results" MODIFIED="1532681147450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$k_fristQT11.coverage" NAME="k_fristQT11 Coverage Results" MODIFIED="1532309077878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pyside" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$Task.coverage" NAME="Task Coverage Results" MODIFIED="1532341882371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$test_qt.coverage" NAME="test_qt Coverage Results" MODIFIED="1532081976576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
@@ -25,20 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="untitled.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config_QT/untitled.py">
+      <file leaf-file-name="test_qt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="53" selection-start-line="53" selection-end-line="59" selection-end-column="25" />
+            <state relative-caret-position="248">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_build_ui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
+      <file leaf-file-name="analysis_cfg.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="891">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,23 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysis_cfg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-              <folding>
-                <element signature="e#24#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Task_win.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
+            <state relative-caret-position="341">
+              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -90,14 +84,12 @@
       </file>
       <file leaf-file-name="RenderBase.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Task.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5478">
-              <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
+            <state relative-caret-position="462">
+              <caret line="494" lean-forward="true" selection-start-line="494" selection-end-line="494" />
+              <folding>
+                <element signature="e#48#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>QWidget</find>
       <find>self.k_button2</find>
       <find>qrc_resources</find>
       <find>QMainWindow</find>
@@ -125,13 +116,23 @@
       <find>QTableWidgetItem</find>
       <find>QFileInfo</find>
       <find>k_getfile</find>
-      <find>self.k_convert</find>
       <find>self.kthread</find>
       <find>self.kop</find>
       <find>self.kcl</find>
       <find>kop</find>
       <find>QLineEdit</find>
       <find>hide</find>
+      <find>self.k_convert</find>
+      <find>self.G_DEBUG_LOG</find>
+      <find>logging</find>
+      <find>init_log</find>
+      <find>make_dir</find>
+      <find>self.G_TASK_JSON</find>
+      <find>G_INPUT_CG_FILE</find>
+      <find>G_INPUT_USER_PATH</find>
+      <find>G_WORK_RENDER_TASK_CFG</find>
+      <find>CLASS_COMMON_UTIL</find>
+      <find>copy_black</find>
       <find>kcl</find>
       <find>analysisMapping</find>
     </findStrings>
@@ -148,6 +149,8 @@
         <option value="$PROJECT_DIR$/Config_QT/实现文档打印功能.py" />
         <option value="$PROJECT_DIR$/Test_task/analysis_cfg.py" />
         <option value="$PROJECT_DIR$/Test_task/Task_win.py" />
+        <option value="$PROJECT_DIR$/Config_QT/test_qt.py" />
+        <option value="$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py" />
       </list>
     </option>
   </component>
@@ -232,9 +235,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/python/Pycharm_python36/Test_task/analysis_cfg.py&#10;App&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Python3.6.5/Lib/site-packages/pyqt5-tools/designer.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -388,17 +392,17 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" visible="true" weight="0.26836735" />
+      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" visible="true" weight="0.18775511" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8089261" visible="true" weight="0.15123789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15123789" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.19107392" side_tool="true" visible="true" weight="0.15123789" />
+      <window_info id="Structure" order="1" side_tool="true" visible="true" weight="0.15123789" />
+      <window_info id="Favorites" order="2" sideWeight="0.19107392" side_tool="true" weight="0.15123789" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,6 +439,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -467,13 +476,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+    <entry file="file://$PROJECT_DIR$/Config_QT/实现文档打印功能.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-297">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4268">
+          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -491,17 +504,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/实现文档打印功能.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pyside/k_frist4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
           <caret line="122" column="22" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python3.6.5/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="1295" column="8" selection-start-line="1295" selection-start-column="8" selection-end-line="1295" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-2144850015/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="475" column="4" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python3.6.5/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="471" column="4" selection-start-line="471" selection-start-column="4" selection-end-line="471" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -515,27 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5478">
-          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
+        <state relative-caret-position="341">
+          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
           </folding>
@@ -543,7 +573,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="494" lean-forward="true" selection-start-line="494" selection-end-line="494" />
+          <folding>
+            <element signature="e#48#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

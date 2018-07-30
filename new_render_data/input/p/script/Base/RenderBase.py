@@ -37,10 +37,13 @@ class RenderBase(object):
         # G_CG_NAME,G_ACTION,G_USER_ID,G_TASK_ID,G_TASK_JSON,G_USER_ID_PARENT,G_SCRIPT_POOL,G_RENDER_OS,G_SYS_ARGVS,G_NODE_PY  &&  G_SCHEDULER_CLUSTER_ID,G_SCHEDULER_CLUSTER_NODES
         for key in list(param_dict.keys()):
             if key.startswith('G'):
+                #分析传进来的参数, exp: self.G_JOB_ID = param_dict["G_JOB_ID"]
                 assign = 'self.{0} = param_dict["{0}"]'.format(key)
+                #执行刚才的字符串
                 exec (assign)
                 # exec('self.'+key+'=param_dict["'+key+'"]')
 
+        #G_SYS_ARGVS 数组数据
         argvs = self.G_SYS_ARGVS
         self.G_MUNU_ID = argvs[1]  # munu_task_id
         self.G_JOB_ID = argvs[2]  # munu_job_id
@@ -62,6 +65,7 @@ class RenderBase(object):
         # -----------------------------------------log-----------------------------------------------
         self.G_DEBUG_LOG = logging.getLogger('debug_log')
         self.G_RENDER_LOG = logging.getLogger('render_log')
+        #设置日志属性
         self.init_log()
 
         # -----------------------------------------analyse frame-----------------------------------------------
@@ -88,6 +92,7 @@ class RenderBase(object):
             self.g_one_machine_multiframe = None
 
         # -----------------------------------------work directory-----------------------------------------------
+        #c:/work/render
         self.G_WORK_RENDER = os.path.normpath(os.path.join(self.G_WORK, 'render'))
         self.G_WORK_RENDER_TASK = os.path.normpath(os.path.join(self.G_WORK_RENDER, self.G_TASK_ID))
         self.G_WORK_RENDER_TASK_CFG = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK, 'cfg'))
@@ -99,6 +104,7 @@ class RenderBase(object):
         self.G_WORK_RENDER_TASK_MULTIFRAME = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK, 'multiframe'))
         self.G_WORK_RENDER_TASK_MULTIFRAME_BAK = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK, 'multiframe_bak'))
 
+        #创建输出文件夹
         self.make_dir()
 
         # -----------------------------------------kafka-----------------------------------------------
@@ -119,16 +125,23 @@ class RenderBase(object):
         # self.G_SMALL_PIC=''
         # self.G_END_TIME=''
 
+        # 客户不能查阅 system.json
         # -----------------------------------------task.json+system.json-----------------------------------------------
+        # TASK.json数据, TASK.json路径
         self.G_DEBUG_LOG.info(self.G_TASK_JSON)
         if not os.path.exists(self.G_TASK_JSON):
             CLASS_COMMON_UTIL.error_exit_log(self.G_DEBUG_LOG, 'task.json not exists')
+        #拷贝task.json文件
         CLASS_COMMON_UTIL.python_copy(os.path.normpath(self.G_TASK_JSON), os.path.normpath(self.G_WORK_RENDER_TASK_CFG))
         self.G_REMOTE_TASK_CFG = os.path.split(self.G_TASK_JSON)[0]
+        #本地json路径
         self.G_TASK_JSON = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK_CFG, 'task.json'))
+        #读取json内容
         self.G_TASK_JSON_DICT = eval(codecs.open(self.G_TASK_JSON, 'r', 'utf-8').read())
+        # TASK.json 内容
         self.G_DEBUG_LOG.info(str(self.G_TASK_JSON_DICT))
 
+        #获取system.json数据, 输出system.json路径
         self.G_DEBUG_LOG.info(self.G_SYSTEM_JSON)
         if not os.path.exists(self.G_SYSTEM_JSON):
             CLASS_COMMON_UTIL.error_exit_log(self.G_DEBUG_LOG, 'system.json not exists')
@@ -136,8 +149,10 @@ class RenderBase(object):
         self.G_REMOTE_TASK_SYS_CFG = os.path.split(self.G_SYSTEM_JSON)[0]
         self.G_SYSTEM_JSON = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK_CFG, 'system.json'))
         self.G_SYSTEM_JSON_DICT = eval(codecs.open(self.G_SYSTEM_JSON, 'r', 'utf-8').read())
+        #输出system.json 内容
         self.G_DEBUG_LOG.info(str(self.G_SYSTEM_JSON_DICT))
 
+        # 转换变量
         software_config = self.G_TASK_JSON_DICT['software_config']
         self.G_CG_CONFIG_DICT = software_config
         self.G_CG_VERSION = software_config['cg_name'] + ' ' + software_config['cg_version']
@@ -170,6 +185,7 @@ class RenderBase(object):
                 # 主子账号重新赋值
                 old_user_path = int(self.G_USER_ID) // 500 * 500
                 new_user_path = int(parent_id) // 500 * 500
+                #转换 input路径
                 self.G_INPUT_CG_FILE = self.G_INPUT_CG_FILE.replace(self.G_USER_ID, parent_id).replace(str(old_user_path), str(new_user_path))
                 self.G_INPUT_PROJECT_PATH = self.G_INPUT_PROJECT_PATH.replace(self.G_USER_ID, parent_id).replace(str(old_user_path), str(new_user_path))
                 self.G_INPUT_USER_PATH = self.G_INPUT_USER_PATH.replace(self.G_USER_ID, parent_id).replace(str(old_user_path), str(new_user_path))
@@ -190,13 +206,16 @@ class RenderBase(object):
         # self.G_KAFKA_TOPIC=common['kafka_topic']
         ##cpu/gpu
         self.G_RENDER_CORE_TYPE = 'cpu'
+        #应该是 GPU才有此KEY
         if 'render_core_type' in common:
             self.G_RENDER_CORE_TYPE = common['render_core_type']
 
+        #错误提示json
         self.G_TIPS_JSON = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK_CFG, 'tips.json'))
         self.G_DRIVERC_7Z = os.path.normpath('d:/7-Zip/7z.exe')
 
         # -----------------------------------------assert.json-----------------------------------------------
+        #资产json
         self.G_ASSET_JSON = os.path.normpath(os.path.join(self.G_WORK_RENDER_TASK_CFG, 'asset.json'))
         asset_json = os.path.join(self.G_CONFIG_PATH, 'asset.json')
         if os.path.exists(asset_json):
@@ -204,12 +223,13 @@ class RenderBase(object):
             self.G_ASSET_JSON_DICT = eval(codecs.open(asset_json, 'r', 'utf-8').read())
 
         # -----------------------------------------fee-----------------------------------------------
+        #费用分析
         self.G_FEE_PARSER = configparser.ConfigParser()
         if not self.G_FEE_PARSER.has_section('render'):
             self.G_FEE_PARSER.add_section('render')
 
         # 新平台和munu不兼容平台号,最快的方法是脚本帮忙翻译平台号
-        # 2 5 8 9 10--->>www2 pic www8 www9 gpu
+        # 2 5 8 9 21--->>www2 pic www8 www9 gpu
         platform_alias = 'www2'
         if self.G_PLATFORM == '0':
             platform_alias = 'www0'
@@ -269,14 +289,16 @@ class RenderBase(object):
         print('[BASE.init.end.....]')
 
     def RB_SYSTEM_INFO(self):
+        #开头标识
         self.G_DEBUG_LOG.info("-" * 20 + "  SysTemInfo  " + "-" * 20)
+        #节点机 的系统版本(window版本)
         self.G_DEBUG_LOG.info("\r\nComputer Platform: %s" % CLASS_COMMON_UTIL.get_system_version())
-        self.G_DEBUG_LOG.info("Computer HostName: %s" % CLASS_COMMON_UTIL.get_computer_hostname())
+        self.G_DEBUG_LOG.info("Computer HostName: %s" % CLASS_COMMON_UTIL.get_computer_hostname())#节点机名
+        self.G_DEBUG_LOG.info("Computer System: %s" % CLASS_COMMON_UTIL.get_system())#系统名(window)
+        self.G_DEBUG_LOG.info("Computer Ip: %s" % CLASS_COMMON_UTIL.get_computer_ip()) #IP
+        self.G_DEBUG_LOG.info("Computer MAC: %s\r\n" % CLASS_COMMON_UTIL.get_computer_mac()) #mac地址
 
-        self.G_DEBUG_LOG.info("Computer System: %s" % CLASS_COMMON_UTIL.get_system())
-        self.G_DEBUG_LOG.info("Computer Ip: %s" % CLASS_COMMON_UTIL.get_computer_ip())
-        self.G_DEBUG_LOG.info("Computer MAC: %s\r\n" % CLASS_COMMON_UTIL.get_computer_mac())
-
+        # 列出所有本地盘符
         if self.G_RENDER_OS != '0':
             lp_buffer = ctypes.create_string_buffer(78)
             ctypes.windll.kernel32.GetLogicalDriveStringsA(ctypes.sizeof(lp_buffer), lp_buffer)
@@ -293,8 +315,10 @@ class RenderBase(object):
         self.format_log('执行自定义PY脚本', 'start')
         self.G_DEBUG_LOG.info('[BASE.RB_PRE_PY.start.....]')
         self.G_DEBUG_LOG.info('如果以下自定义PY脚本存在，会执行此脚本')
+        #pre_py=c:\script\new_py\CG\Maya\function\Pre.py
         pre_py = os.path.join(self.G_NODE_PY, 'CG', self.G_CG_NAME, 'function', 'Pre.py')
         self.G_DEBUG_LOG.info(pre_py)
+        #导入模块 并执行
         if os.path.exists(pre_py):
             import Pre as PRE_PY_MODEL
             self.PRE_DICT = PRE_PY_MODEL.main()
@@ -321,12 +345,15 @@ class RenderBase(object):
             if self.G_CG_NAME != 'Max' and 'mnt_map' in self.G_TASK_JSON_DICT:
                 map_dict = self.G_TASK_JSON_DICT['mnt_map']
                 for key, value in list(map_dict.items()):
+                    #处理斜杠问题
                     value = os.path.normpath(value)
                     map_cmd = 'net use "%s" "%s"' % (key, value)
                     # CLASS_COMMON_UTIL.cmd_python3(map_cmd,my_log=self.G_DEBUG_LOG)
+                    #执行cmd
                     CLASS_COMMON_UTIL.cmd(map_cmd, my_log=self.G_DEBUG_LOG)
                     if key.lower() == 'b:':
                         b_flag = True
+            #映射B盘
             if not b_flag:
                 map_cmd_b = 'net use B: "%s"' % (os.path.normpath(self.G_PLUGIN_PATH))
                 CLASS_COMMON_UTIL.cmd(map_cmd_b, my_log=self.G_DEBUG_LOG, try_count=3)
@@ -346,11 +373,10 @@ class RenderBase(object):
         self.G_DEBUG_LOG.info('[BASE.RB_HAN_FILE.end.....]')
         self.format_log('done', 'end')
 
-    '''
-        渲染基本配置
-    '''
+
 
     def RB_CONFIG_BASE(self):  # 4
+        """渲染基本配置 拷贝z7 及 弹窗工具"""
         self.format_log('渲染基本配置', 'start')
         self.G_DEBUG_LOG.info('[BASE.RB_CONFIG_BASE.start.....]')
 
@@ -444,7 +470,7 @@ class RenderBase(object):
             node_tips_json = os.path.join(self.G_WORK_RENDER_TASK_CFG, tips_json_name)
             if not os.path.exists(node_task_json):
                 CLASS_COMMON_UTIL.error_exit_log(self.G_DEBUG_LOG, 'Analyze  file failed . task.json not exists')
-
+            #拷贝本地 json 到服务器
             self.copy_cfg_to_server(node_task_json, node_asset_json, node_tips_json)
         else:
             self.result_action()
@@ -459,8 +485,10 @@ class RenderBase(object):
         self.format_log('渲染完毕执行自定义脚本', 'start')
         self.G_DEBUG_LOG.info('[BASE.RB_POST_PY.start.....]')
         self.G_DEBUG_LOG.info('如果以下路径的脚本存在，则会被执行')
+        #post_py = c:\script\new_py\CG\Maya\function\Post.py
         post_py = os.path.join(self.G_NODE_PY, 'CG', self.G_CG_NAME, 'function', 'Post.py')
         self.G_DEBUG_LOG.info(post_py)
+        #导入模块 并执行
         if os.path.exists(post_py):
             import Post as POST_PY_MODEL
             self.POST_DICT = POST_PY_MODEL.main()
