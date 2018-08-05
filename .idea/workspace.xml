@@ -25,71 +25,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_qt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+      <file leaf-file-name="render.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-2674" />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysis_cfg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-              <folding>
-                <element signature="e#24#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="k_frist4.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pyside/k_frist4.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="122" column="22" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="k_fristQT11.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pyside/k_fristQT11.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="300" column="8" selection-start-line="300" selection-start-column="8" selection-end-line="300" selection-end-column="19" />
-              <folding>
-                <element signature="e#24#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task_win.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-              <folding>
-                <element signature="e#25#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RenderBase.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RenderBase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="494" lean-forward="true" selection-start-line="494" selection-end-line="494" />
+            <state relative-caret-position="685">
+              <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
               <folding>
                 <element signature="e#48#62#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RenderMaya.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="208" column="45" lean-forward="true" selection-start-line="208" selection-start-column="45" selection-end-line="208" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Maya.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-488" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MayaPlugin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1749">
+              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -105,19 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.k_button2</find>
-      <find>qrc_resources</find>
-      <find>QMainWindow</find>
-      <find>k_tabWidget</find>
-      <find>shoudong_win</find>
-      <find>sd_win</find>
-      <find>cleartabItem</find>
-      <find>self.k_tabWidget</find>
-      <find>QTableWidgetItem</find>
-      <find>QFileInfo</find>
-      <find>k_getfile</find>
-      <find>self.kthread</find>
-      <find>self.kop</find>
       <find>self.kcl</find>
       <find>kop</find>
       <find>QLineEdit</find>
@@ -135,6 +97,19 @@
       <find>copy_black</find>
       <find>kcl</find>
       <find>analysisMapping</find>
+      <find>cmd</find>
+      <find>G_CG_NAME</find>
+      <find>G_NODE_MAYASCRIPT</find>
+      <find>G_PRERENDER_NAME</find>
+      <find>RB_RENDER</find>
+      <find>G_NODE_PY</find>
+      <find>G_RN_MAYA_PRERENDER</find>
+      <find>RB_CONFIG</find>
+      <find>RENDER_LAYER_TYPE</find>
+      <find>layer</find>
+      <find>G_CG_TILE_COUNT</find>
+      <find>MAYA_FINAL_RENDER_CMD</find>
+      <find>get_render_cmd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,6 +126,10 @@
         <option value="$PROJECT_DIR$/Test_task/Task_win.py" />
         <option value="$PROJECT_DIR$/Config_QT/test_qt.py" />
         <option value="$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py" />
+        <option value="$PROJECT_DIR$/new_render_data/input/p/script/abort/Maya/Maya.py_bak20180703" />
+        <option value="$PROJECT_DIR$/new_render_data/input/p/script/abort/Maya/RenderMaya.py_bak20180424" />
+        <option value="$PROJECT_DIR$/new_render_data/input/p/script/Util/RunCmd.py" />
+        <option value="$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py" />
       </list>
     </option>
   </component>
@@ -163,7 +142,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="291" />
     <option name="y" value="40" />
     <option name="width" value="1400" />
@@ -221,6 +200,54 @@
               <item name="p" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
               <item name="Base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="Maya" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="Maya" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
+              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="p" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +411,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="54" y="-8" width="1654" height="1046" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -392,15 +419,15 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" visible="true" weight="0.18775511" />
+      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" weight="0.18775511" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15123789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001221" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.16129032" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" visible="true" weight="0.15123789" />
+      <window_info active="true" id="Structure" order="1" side_tool="true" visible="true" weight="0.21001221" />
       <window_info id="Favorites" order="2" sideWeight="0.19107392" side_tool="true" weight="0.15123789" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -572,13 +599,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/User/100001_abort20180122/修改扣费路径.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/User/100001_abort20180122/Base/RenderBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4403" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/Util/CommonUtil.py_bak20171018">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2953">
+          <caret line="181" column="40" lean-forward="true" selection-start-line="181" selection-start-column="40" selection-end-line="181" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaThread.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Util/RunCmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/Maya/RenderMaya.py_bak20180424">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="50" />
+          <folding>
+            <element signature="e#5940#6431#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/Maya/Maya.py_bak20180703">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/NukeMerge.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Util/CommonUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2674" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="494" lean-forward="true" selection-start-line="494" selection-end-line="494" />
+        <state relative-caret-position="685">
+          <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
           <folding>
             <element signature="e#48#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1749">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="208" column="45" lean-forward="true" selection-start-line="208" selection-start-column="45" selection-end-line="208" selection-end-column="45" />
         </state>
       </provider>
     </entry>

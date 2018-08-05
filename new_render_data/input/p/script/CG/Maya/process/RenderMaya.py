@@ -34,6 +34,7 @@ class RenderMaya(Maya):
     def __init__(self,**paramDict):
         Maya.__init__(self,**paramDict)
         self.format_log('RenderMaya.init','start')
+        # 打印 继承来的全局变量
         for key,value in self.__dict__.items():
             self.G_DEBUG_LOG.info(key+'='+str(value))
         self.format_log('done','end')
@@ -44,16 +45,22 @@ class RenderMaya(Maya):
         self.G_PRERENDER_NAME ='PreRender.py'
         self.G_POSTRENDER_NAME = 'PostRender.py'
         self.G_CUSTOME_PRERENDER_NAME = 'C_PreRender.py'
+        # {'cg_version': '2017', 'plugins': {'pgYetiMaya': '2.2.1', 'mtoa': '2.0.1'}, 'cg_name': 'Maya'}
         self.CG_PLUGINS_DICT = self.G_CG_CONFIG_DICT['plugins']
         self.CG_NAME =self.G_CG_CONFIG_DICT['cg_name']
         self.CG_VERSION =self.G_CG_CONFIG_DICT['cg_version']
-        self.ENABLE_LAYERED = self.G_TASK_JSON_DICT['scene_info_render']['enable_layered']
+        self.ENABLE_LAYERED = self.G_TASK_JSON_DICT['scene_info_render']['enable_layered'] # 多渲染层
+        # //10.60.100.101/render_d/temp/100000000/100000175
         self.TEMP_PATH = self.G_SYSTEM_JSON_DICT['system_info']['common']['temp_path']
 
+        # c:\script\new_py\CG\Maya\script\Render.py
         self.G_RN_MAYA_PRERENDER  = os.path.join(self.G_NODE_MAYASCRIPT,self.G_PRERENDER_NAME).replace('\\','/')
+        # c:\script\new_py\CG\Maya\script\PostRender.py
         self.G_RN_MAYA_POSTRENDER = os.path.join(self.G_NODE_MAYASCRIPT,self.G_POSTRENDER_NAME).replace('\\', '/')
+        # c:\script\new_py\CG\Maya\script\C_PreRender.py
         self.G_RN_MAYA_CUSTOME_PRERENDER = os.path.join(self.G_NODE_MAYASCRIPT, self.G_CUSTOME_PRERENDER_NAME).replace('\\', '/')
 
+        # G_CG_TILE_COUNT = 分块总数 G_CG_TILE = 当前分块号码  相等的情况是合并帧任务
         if self.G_CG_TILE_COUNT == self.G_CG_TILE:
             self.IMAGE_MERGE_FRAME = "1"
         else:
@@ -84,9 +91,12 @@ class RenderMaya(Maya):
 
 
     def RB_CONFIG(self):
+        """拷贝2017的mayaBatchRenderProcedure,删除mayabatch进程,设置环境变量,执行 MayaPlugin 配置插件,
+        get_render_cmd 获取cmd内容 并打印."""
         self.G_DEBUG_LOG.info('[Maya.RBconfig.start.....]')
         try:
             if float(self.CG_VERSION)==2017:
+                # 拷贝mayaBatchRenderProcedure.mel
                 # os.system ("robocopy /e /ns /nc /nfl /ndl /np  \"//10.70.242.102/render_p/script/User/100000056/maya2017\"  \"C:/Program Files/Autodesk/Maya2017/scripts/others\"" )
                 copy_cmd = '{fcopy_path} /speed=full /force_close /no_confirm_stop /force_start "{source}" /to="{destination}"'.format(
                     fcopy_path='c:\\fcopy\\FastCopy.exe',
@@ -99,7 +109,7 @@ class RenderMaya(Maya):
         except Exception as err:
             self.G_DEBUG_LOG.infor(err)
 
-
+        # G_CG_TILE_COUNT = 分块总数 G_CG_TILE = 当前分块号码  相等的情况是合并帧任务
         if self.G_CG_TILE_COUNT != self.G_CG_TILE:
             print("----------------------------------------loading plugins start ------------------------------------------")
             #kill maya
@@ -109,9 +119,11 @@ class RenderMaya(Maya):
             os.environ['MAYA_DISABLE_CIP'] = '1'
             os.environ['MAYA_DISABLE_CLIC_IPM'] = '1'
             os.environ['MAYA_DISABLE_CER'] = '1'
+            #设置Viewport2.0
             if float(self.CG_VERSION)>=2016:
                 os.environ['MAYA_OPENCL_IGNORE_DRIVER_VERSION'] = '1'
                 os.environ['MAYA_VP2_DEVICE_OVERRIDE'] = 'VirtualDeviceDx11'
+            #根据平台设置渲染层模式 设置
             if int(self.RENDER_LAYER_TYPE):
                 os.environ['MAYA_ENABLE_LEGACY_RENDER_LAYERS'] = "0"
             else:
@@ -120,7 +132,9 @@ class RenderMaya(Maya):
             self.G_DEBUG_LOG.info('插件配置')
             if self.G_CG_CONFIG_DICT:
                 sys.stdout.flush()
+                #c:\script\new_py\CG\Maya\function\C_PreRender.py
                 custom_config = os.path.join(self.G_NODE_MAYAFUNCTION,self.G_CUSTOME_CONFIG_NAME).replace('\\','/')
+                # 在munu.log打印出 prerender路径
                 if self.G_NODE_MAYAFUNCTION:
                     if os.path.exists(custom_config):
                         sys.stdout.flush()
@@ -131,6 +145,7 @@ class RenderMaya(Maya):
                 print("plugin path:")
                 print(self.G_CG_CONFIG_DICT)
                 sys.stdout.flush()
+                #执行 MayaPlugin
                 maya_plugin = MayaPlugin(self.G_CG_CONFIG_DICT,[custom_config],self.G_USER_ID,self.G_TASK_ID,self.G_DEBUG_LOG)
                 maya_plugin.config()
                 sys.stdout.flush()
@@ -139,6 +154,7 @@ class RenderMaya(Maya):
 
             # #------------get render cmd----------
             self.MAYA_FINAL_RENDER_CMD = self.get_render_cmd()
+            #打印 cmd 内容
             self.G_DEBUG_LOG.info(self.MAYA_FINAL_RENDER_CMD)
         else:
             self.G_DEBUG_LOG.info("[RenderNuke  Comp...........................]")
@@ -148,7 +164,7 @@ class RenderMaya(Maya):
 
     def RB_PRE_PY(self):  # 1
         '''
-            pre custom
+            pre custom   执行流程的Pre.py
         '''
 
         self.format_log('执行自定义PY脚本', 'start')
@@ -156,6 +172,7 @@ class RenderMaya(Maya):
         self.G_DEBUG_LOG.info('如果以下自定义PY脚本存在，会执行此脚本')
         pre_py = os.path.join(self.G_NODE_PY, 'CG', self.G_CG_NAME, 'function', 'Pre.py')
         self.G_DEBUG_LOG.info(pre_py)
+        # 执行流程的Pre.py
         if os.path.exists(pre_py):
             import Pre as PRE_PY_MODEL
             self.PRE_DICT = PRE_PY_MODEL.main()
@@ -167,8 +184,9 @@ class RenderMaya(Maya):
         渲染
     '''
     def RB_RENDER(self):#5    
-    
+
         self.format_log('渲染','start')
+        # G_CG_TILE_COUNT = 分块总数 G_CG_TILE = 当前分块号码  相等的情况是合并帧任务
         if int(self.G_CG_TILE_COUNT) != int(self.G_CG_TILE):
             self.G_DEBUG_LOG.info('[RenderMaya.RB_RENDER.start.....]')
             # if self.PRE_DICT == None:

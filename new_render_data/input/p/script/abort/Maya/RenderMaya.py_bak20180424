@@ -31,19 +31,23 @@ class RenderMaya(Maya):
     def __init__(self,**paramDict):
         Maya.__init__(self,**paramDict)
         self.format_log('RenderMaya.init','start')
+        # 打印 继承来的全局变量
         for key,value in self.__dict__.items():
             self.G_DEBUG_LOG.info(key+'='+str(value))
         self.format_log('done','end')
-               
+
         self.G_CUSTOM_CONFIG_NAME ='CustomConfig.py'
         self.G_PRE_NAME ='Pre.py'
         self.G_POST_NAME ='Post.py'
         self.G_PRERENDER_NAME ='Render.py'
         self.G_POSTRENDER_NAME = 'PostRender.py'
+        #{'cg_version': '2017', 'plugins': {'pgYetiMaya': '2.2.1', 'mtoa': '2.0.1'}, 'cg_name': 'Maya'}
         self.CG_PLUGINS_DICT = self.G_CG_CONFIG_DICT['plugins']
         self.CG_NAME =self.G_CG_CONFIG_DICT['cg_name']
         self.CG_VERSION =self.G_CG_CONFIG_DICT['cg_version']
+        #多渲染层
         self.ENABLE_LAYERED = self.G_TASK_JSON_DICT['scene_info_render']['enable_layered']
+        #//10.60.100.101/render_d/temp/100000000/100000175
         self.TEMP_PATH = self.G_TASK_JSON_DICT['system_info']['common']['temp_path']
         if self.G_CG_TILE_COUNT == self.G_CG_TILE:
             self.IMAGE_MERGE_FRAME = "1"
@@ -61,7 +65,7 @@ class RenderMaya(Maya):
         # 完成队列
         self.multiframe_complete_list = []
         self.monitor_complete_thread = None
-        # 记录文件
+        # 记录文件 c:\work\render\26279\multiframe\26279_2018072901515_0_1
         self.render_record_json = os.path.join(self.G_WORK_RENDER_TASK_MULTIFRAME, "{task_id}_{munu_task_id}_{munu_job_id}_{frames}".format(
             munu_task_id=self.G_MUNU_ID,
             munu_job_id=self.G_JOB_ID,
@@ -353,8 +357,11 @@ class RenderMaya(Maya):
             if not os.path.exists(self.renderSettings["output"]):
                 os.makedirs(self.renderSettings["output"])
 
+        #c:\script\new_py\CG\Maya\script\Render.py
         self.G_RN_MAYA_PRERENDER  = os.path.join(self.G_NODE_MAYASCRIPT,self.G_PRERENDER_NAME).replace('\\','/')
+        # c:\script\new_py\CG\Maya\script\PostRender.py
         self.G_RN_MAYA_POSTRENDER = os.path.join(self.G_NODE_MAYASCRIPT,self.G_POSTRENDER_NAME).replace('\\', '/')
+
     
         if self.G_INPUT_PROJECT_PATH:
             if os.path.exists(self.G_INPUT_PROJECT_PATH):
