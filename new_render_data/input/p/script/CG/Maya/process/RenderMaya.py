@@ -284,6 +284,7 @@ class RenderMaya(Maya):
         render_cmd = ''                 
 
         if self.G_RENDER_OS== '0':
+            #对linux 系统做调整
             if float(self.CG_VERSION) < 2016:
                 version_name = "%s-x64" % (self.CG_VERSION)
             else:
@@ -292,21 +293,28 @@ class RenderMaya(Maya):
                 "maya%s/bin/Render" % (version_name)
             self.renderSettings["mayabatch.exe"] = "/usr/autodesk/" \
                 "maya%s/bin/maya -batch" % (version_name)
+
+        #render.exe的路径
         self.renderSettings["render.exe"] = "C:/Program Files/Autodesk/" \
             "maya%s/bin/render.exe" % (self.CG_VERSION)
+        #输出图片路径
         self.renderSettings["output"] = os.path.normpath(self.G_WORK_RENDER_TASK_OUTPUT).replace("\\","/")
 
         # 一机多帧
         self.renderSettings["g_one_machine_multiframe"] = self.g_one_machine_multiframe
         if self.g_one_machine_multiframe is True:
+            #对一机多帧的任务 输出图片路径做处理 先放在temp_out文件夹
             self.renderSettings["output"] = os.path.join(os.path.normpath(self.G_WORK_RENDER_TASK_OUTPUT),"temp_out").replace("\\","/")
         self.renderSettings["output_frame"] = os.path.normpath(self.G_WORK_RENDER_TASK_OUTPUT).replace("\\","/")
 
         if not os.path.exists(self.renderSettings["output"]):
             os.makedirs(self.renderSettings["output"])
 
+        #分块的区域
         self.renderSettings["tile_region"] = ""
+        #分块数量
         self.renderSettings["tiles"] = int(self.G_CG_TILE_COUNT)
+        #当前分块位置
         self.renderSettings["tile_index"] = int(self.G_CG_TILE)
         # -----------render tiles------------
         if self.renderSettings["tiles"] > 1:

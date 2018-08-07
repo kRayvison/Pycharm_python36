@@ -10,15 +10,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pycharm_python36$untitled__1_.coverage" NAME="untitled (1) Coverage Results" MODIFIED="1532318441982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$Task_win.coverage" NAME="Task_win Coverage Results" MODIFIED="1532681147450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$untitled__1_.coverage" NAME="untitled (1) Coverage Results" MODIFIED="1532318441982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$temp_test.coverage" NAME="temp_test Coverage Results" MODIFIED="1533473451881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/k_test" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$test_qt.coverage" NAME="test_qt Coverage Results" MODIFIED="1533467929664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1532085138140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$analysis_cfg.coverage" NAME="analysis_cfg Coverage Results" MODIFIED="1532415968518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$k_fristQT11.coverage" NAME="k_fristQT11 Coverage Results" MODIFIED="1532309077878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pyside" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$Task.coverage" NAME="Task Coverage Results" MODIFIED="1532341882371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$test_qt.coverage" NAME="test_qt Coverage Results" MODIFIED="1532081976576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$.coverage" NAME="实现文档打印功能 Coverage Results" MODIFIED="1532402082630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1532085138140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
     <SUITE FILE_PATH="coverage/Pycharm_python36$test_build_ui.coverage" NAME="test_build_ui Coverage Results" MODIFIED="1532085237944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
-    <SUITE FILE_PATH="coverage/Pycharm_python36$analysis_cfg.coverage" NAME="analysis_cfg Coverage Results" MODIFIED="1532415968518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test_task" />
+    <SUITE FILE_PATH="coverage/Pycharm_python36$.coverage" NAME="实现文档打印功能 Coverage Results" MODIFIED="1532402082630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_QT" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Pycharm_python36" />
@@ -27,15 +28,13 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="render.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2674" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="RenderBase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
+            <state relative-caret-position="9834">
               <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
               <folding>
                 <element signature="e#48#62#0" expanded="true" />
@@ -44,27 +43,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RenderMaya.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RenderMaya.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="208" column="45" lean-forward="true" selection-start-line="208" selection-start-column="45" selection-end-line="208" selection-end-column="45" />
+            <state relative-caret-position="10032">
+              <caret line="320" column="23" selection-start-line="320" selection-start-column="12" selection-end-line="320" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/k_test/temp_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_build_ui.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_qt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="实现文档打印功能.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Config_QT/实现文档打印功能.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Maya.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-488" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="MayaPlugin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1749">
-              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="231">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -108,8 +141,8 @@
       <find>RENDER_LAYER_TYPE</find>
       <find>layer</find>
       <find>G_CG_TILE_COUNT</find>
-      <find>MAYA_FINAL_RENDER_CMD</find>
       <find>get_render_cmd</find>
+      <find>MAYA_FINAL_RENDER_CMD</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,6 +163,7 @@
         <option value="$PROJECT_DIR$/new_render_data/input/p/script/abort/Maya/RenderMaya.py_bak20180424" />
         <option value="$PROJECT_DIR$/new_render_data/input/p/script/Util/RunCmd.py" />
         <option value="$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py" />
+        <option value="$PROJECT_DIR$/k_test/temp_test.py" />
       </list>
     </option>
   </component>
@@ -142,9 +176,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="291" />
-    <option name="y" value="40" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="432" />
+    <option name="y" value="247" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -154,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,7 +199,7 @@
             <path>
               <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
-              <item name="Config_QT" type="462c0819:PsiDirectoryNode" />
+              <item name="k_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
@@ -231,41 +266,18 @@
               <item name="Maya" type="462c0819:PsiDirectoryNode" />
               <item name="process" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
-              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="p" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
-              <item name="new_render_data" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="p" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pycharm_python36" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pycharm_python36" type="462c0819:PsiDirectoryNode" />
-              <item name="Test_task" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/python/Pycharm_python36/Test_task/analysis_cfg.py&#10;App&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Python3.6.5/Lib/site-packages/pyqt5-tools/designer.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/PreMaya.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/PreMaya.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -284,45 +296,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Task_win">
-    <configuration name="实现文档打印功能" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pycharm_python36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Config_QT" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Config_QT/实现文档打印功能.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Task" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pycharm_python36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test_task" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test_task/Task.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.temp_test">
     <configuration name="Task_win" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pycharm_python36" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,7 +316,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="analysis_cfg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="temp_test - 副本" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pycharm_python36" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -350,18 +324,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test_task" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/k_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test_task/analysis_cfg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/k_test/temp_test - 副本.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="untitled (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="temp_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pycharm_python36" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,31 +343,69 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test_task" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/k_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test_task/untitled.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/k_test/temp_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test_build_ui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pycharm_python36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Config_QT" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Config_QT/test_build_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test_qt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pycharm_python36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Config_QT" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Config_QT/test_qt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.untitled (1)" />
-      <item itemvalue="Python.Task" />
       <item itemvalue="Python.Task_win" />
-      <item itemvalue="Python.实现文档打印功能" />
-      <item itemvalue="Python.analysis_cfg" />
+      <item itemvalue="Python.temp_test" />
+      <item itemvalue="Python.temp_test - 副本" />
+      <item itemvalue="Python.test_qt" />
+      <item itemvalue="Python.test_build_ui" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.temp_test" />
+        <item itemvalue="Python.test_qt" />
+        <item itemvalue="Python.test_build_ui" />
+        <item itemvalue="Python.temp_test - 副本" />
         <item itemvalue="Python.Task_win" />
-        <item itemvalue="Python.analysis_cfg" />
-        <item itemvalue="Python.实现文档打印功能" />
-        <item itemvalue="Python.Task" />
-        <item itemvalue="Python.untitled (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -411,52 +423,51 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1654" height="1046" extended-state="7" />
-    <editor active="true" />
+    <frame x="432" y="247" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053823" side_tool="true" weight="0.26632652" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" weight="0.18775511" />
+      <window_info anchor="bottom" x="62" y="443" width="1858" height="248" id="Run" order="2" sideWeight="0.4994618" weight="0.2244898" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001221" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954751" visible="true" weight="0.3020231" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.16129032" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" id="Structure" order="1" side_tool="true" visible="true" weight="0.21001221" />
+      <window_info id="Structure" order="1" sideWeight="0.5045249" side_tool="true" visible="true" weight="0.3020231" />
       <window_info id="Favorites" order="2" sideWeight="0.19107392" side_tool="true" weight="0.15123789" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.16129032" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1517761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22653061" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -468,69 +479,135 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Config_QT/test_build_ui.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/k_test/temp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/untitled.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/untitled.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="495">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Config_QT/实现文档打印功能.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+        <state relative-caret-position="165">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/Task.py">
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4268">
-          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
+        <state relative-caret-position="231">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="330">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/untitled.py">
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="53" selection-start-line="53" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="10560">
+          <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
+          <folding>
+            <element signature="e#48#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9438">
+          <caret line="302" column="14" lean-forward="true" selection-start-line="302" selection-start-column="14" selection-end-line="302" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_test/temp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_test/temp_test - 副本.py" />
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10560">
+          <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
+          <folding>
+            <element signature="e#48#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6336">
+          <caret line="208" column="45" lean-forward="true" selection-start-line="208" selection-start-column="45" selection-end-line="208" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config_QT/untitled.py" />
+    <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py" />
+    <entry file="file://$PROJECT_DIR$/Test_task/untitled.py" />
+    <entry file="file://$PROJECT_DIR$/Test_task/Task.py" />
+    <entry file="file://$PROJECT_DIR$/Config_QT/untitled.py" />
     <entry file="file://$PROJECT_DIR$/Pyside/k_frist4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
@@ -538,67 +615,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python3.6.5/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="1295" column="8" selection-start-line="1295" selection-start-column="8" selection-end-line="1295" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-2144850015/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="475" column="4" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python3.6.5/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="471" column="4" selection-start-line="471" selection-start-column="4" selection-end-line="471" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_task/analysis_cfg.py" />
+    <entry file="file://C:/Python3.6.5/Lib/logging/__init__.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-2144850015/builtins.py" />
+    <entry file="file://C:/Python3.6.5/Lib/ntpath.py" />
     <entry file="file://$PROJECT_DIR$/Pyside/k_fristQT11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="300" column="8" selection-start-line="300" selection-start-column="8" selection-end-line="300" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="e#25#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_task/Task_win.py" />
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/abort/User/100001_abort20180122/修改扣费路径.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -635,9 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <element signature="e#5940#6431#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,9 +677,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/Maya.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-488" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Util/CommonUtil.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -662,13 +685,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/model/render.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2674" />
+        <state relative-caret-position="231">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/Base/RenderBase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
+        <state relative-caret-position="9834">
           <caret line="320" column="17" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
           <folding>
             <element signature="e#48#62#0" expanded="true" />
@@ -676,17 +704,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/function/MayaPlugin.py">
+    <entry file="file://$PROJECT_DIR$/k_test/temp_test - 副本.py" />
+    <entry file="file://$PROJECT_DIR$/Config_QT/实现文档打印功能.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1749">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="165">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config_QT/test_build_ui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config_QT/test_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_render_data/input/p/script/CG/Maya/process/RenderMaya.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="208" column="45" lean-forward="true" selection-start-line="208" selection-start-column="45" selection-end-line="208" selection-end-column="45" />
+        <state relative-caret-position="10032">
+          <caret line="320" column="23" selection-start-line="320" selection-start-column="12" selection-end-line="320" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_test/temp_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
