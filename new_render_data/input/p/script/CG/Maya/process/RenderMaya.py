@@ -210,6 +210,8 @@ class RenderMaya(Maya):
 
             start_time = int(time.time())
             if self.g_one_machine_multiframe is True:
+                #:param; string: eg.; '1-10' '5' '1-10[2]'
+                #:return: ['1', '2', '3', '4', '5', ...] / ['5'] / ['1', '3', '5', '7', '9']
                 render_list = CLASS_COMMON_UTIL.need_render_from_frame(self.G_CG_FRAMES)
                 self.render_record.update({render_list[0]: {'start_time': start_time, 'end_time': 0}})
                 pass
