@@ -1,10 +1,26 @@
-
-import os
-ppath = '\\\\10.80.100.201\\d\\outputdata5\\1807000\\1807081\\19218898_mns024_0380_cg_extension_master_01ddddtdddd'
-aa=os.path.normpath(ppath)
-print (aa)
+# -*- coding: utf-8 -*-
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 
 
-print ('hello git')
+class MyWindow(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.myButton = QtWidgets.QPushButton(self)
 
-print ('test home')
+        self.myButton.clicked.connect(self.msg)
+        self.msg()
+    def msg(self):
+        reply = QMessageBox.information(self,  # 使用infomation信息框
+                                        "标题",
+                                        "消息",
+                                        QMessageBox.Yes | QMessageBox.No)
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+    myshow = MyWindow()
+    myshow.show()
+    sys.exit(app.exec_())    

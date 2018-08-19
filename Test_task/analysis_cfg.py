@@ -3,10 +3,10 @@ import json
 import os
 class analysisCfg():
     def __init__(self):
-        cfg_jsonPath = r'D:\cfg\cfg\task.json'
+        cfg_jsonPath = r'D:\Work\cfg\cfg\task.json'
         self.k_cfg_json = json.loads(open(cfg_jsonPath).read())
 
-        sys_jsonPath = r'D:\cfg\sys_cfg\system.json'
+        sys_jsonPath = r'D:\Work\cfg\sys_cfg\system.json'
         self.k_sys_json = json.loads(open(sys_jsonPath).read())
 
     def analysisPlugins(self):
