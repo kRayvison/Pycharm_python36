@@ -24,6 +24,9 @@ class k_Taskwindow(Task.Ui_MainWindow,QWidget):
         self.Plugins_tableWidget.setColumnWidth(1,130)
 
 
+
+
+
         #按钮功能设置
         self.Get_Button.clicked.connect(self.kGetcfg)
 
@@ -48,8 +51,27 @@ class k_Taskwindow(Task.Ui_MainWindow,QWidget):
         self.getData()
 
     def kGetcfg(self):
-        #实例 配置json脚本
-        cfg = analysis_cfg.analysisCfg()
+
+        k_platform_group= [self.W2rb,self.W9rb,self.GPUrb]
+        k_platform = ''
+        for i in k_platform_group:
+            if i.isChecked():
+                k_platform = i.objectName()
+
+        k_taskID = self.TaskID_lineEdit.text()
+        k_useID  = self.UserID_lineEdit.text()
+
+        if not k_platform or not k_taskID or not k_useID:
+            self.msg('No specified Platform or ID')
+            sys.exit(1)
+
+
+        # 实例 配置json脚本
+        cfg = analysis_cfg.analysisCfg(k_platform,k_taskID,k_useID)
+
+        if cfg.k_jsonerror:
+            self.msg('cannot find cfg.json')
+            sys.exit(1)
 
         #填入plugins数据
         Plugins = cfg.analysisPlugins()
@@ -109,7 +131,9 @@ class k_Taskwindow(Task.Ui_MainWindow,QWidget):
         #self.close()
         #self.hide()
         #app.exit()
-        self.getData()
+        #self.getData()
+
+
 
     def getData(self):
         """获取窗口内 Plugins Mapping maya版本 的数据"""

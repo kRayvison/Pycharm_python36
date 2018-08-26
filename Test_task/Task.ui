@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>675</height>
+    <height>692</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -97,7 +97,112 @@ QTableWidget{
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="RBGroupBox_horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>35</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="RBgroupBox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">    background-color: rgb(66, 66, 66);
+
+ color: #BBBBBB;
+	border: 1px solid rgb(66, 66, 66);
+font-family: &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>281</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="grouprb_horizontalLayout">
+          <property name="leftMargin">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="Platform_Label">
+            <property name="text">
+             <string>Platform</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="W2rb">
+            <property name="text">
+             <string>W2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="W9rb">
+            <property name="text">
+             <string>W9</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="GPUrb">
+            <property name="text">
+             <string>GPU</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
     <item>
      <layout class="QHBoxLayout" name="ID_horizontalLayout">
       <property name="topMargin">
@@ -451,7 +556,7 @@ QTableWidget{
          <widget class="QPushButton" name="Mapping_add">
           <property name="minimumSize">
            <size>
-            <width>40</width>
+            <width>75</width>
             <height>22</height>
            </size>
           </property>
@@ -495,7 +600,7 @@ QTableWidget{
           </property>
           <property name="minimumSize">
            <size>
-            <width>40</width>
+            <width>75</width>
             <height>22</height>
            </size>
           </property>
@@ -716,12 +821,6 @@ QTableWidget{
      </layout>
     </item>
    </layout>
-   <zorder>line</zorder>
-   <zorder>Mapping_add</zorder>
-   <zorder>Mapping_reduce</zorder>
-   <zorder>Mapping_netuse</zorder>
-   <zorder>horizontalSpacer_6</zorder>
-   <zorder>Mapping_tableWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
