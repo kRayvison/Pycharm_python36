@@ -1,0 +1,166 @@
+
+global proc SPKpl_sys_preRender_C() {
+    
+    string  $jInfoNodeNew = "SUBMIT_JOB_INFO";
+    if(!`objExists $jInfoNodeNew`){
+        error ($jInfoNodeNew + " is not exists!!!\n");
+        return;
+    }
+    
+    catch(`setAttr defaultRenderGlobals.animation 1`);
+    catch(`setAttr defaultRenderGlobals.putFrameBeforeExt 1`);
+    catch(`setAttr defaultRenderGlobals.periodInExt 1`);
+
+    if (`getAttr defaultRenderGlobals.outFormatControl` == 1)
+        catch(`setAttr defaultRenderGlobals.outFormatControl 0`);
+            
+    int $smooth2 = `getAttr ($jInfoNodeNew + ".autoSmooth")`;
+    int $smooth1 = `getAttr ($jInfoNodeNew + ".smooth1")`;
+    string $projPref = `getAttr ($jInfoNodeNew + ".projectPrefix")`;
+    
+    
+	if($smooth2 == 1 && $smooth1 == 0)
+		catch(SPKlgt_allObjTessellation_CB_C($projPref));
+}
+
+
+global proc SPKlgt_allObjTessellation_CB_C(string $projPref) {
+        select -cl;
+        SPKlgt_allObjTessellation_Sel_CB_C();
+}
+
+
+
+global proc SPKlgt_allObjTessellation_Sel_CB_C() {
+    string $mesh[] = `ls -typ mesh -ni -ap -dag -l -sl`;
+    string $char[], $prop[];
+    
+    if(!size($mesh)){
+        string $curLayer = `editRenderLayerGlobals -q -crl`;
+        string $objects[] = `editRenderLayerMembers -q -fn $curLayer`;
+        $mesh = `ls -typ mesh -ni -dag -l $objects`;
+        //print $mesh;
+    }
+
+    string $mrMesh[] = {};
+    for($item in $mesh){
+
+        string $smtNode[] = `listConnections -s 1 -d 0 -p 0 -type "mentalraySubdivApprox" $item`;
+        if(size($smtNode) > 0){
+            $mrMesh[size($mrMesh)] = $item;
+            continue;
+        }
+
+        saveSetSmooth_C($item + ".smoothLevel");
+
+    }
+
+    string $prxMesh[] = {};
+    for($item in $mesh){
+        string $par[] = `listRelatives -f -p $item`;
+        for($p in $par){
+            if(!`objExists ($p + ".miExportGeoShader")`)
+                continue;
+            if(!`getAttr ($p + ".miExportGeoShader")`)
+                continue;
+            if(!size(`listConnections -s 1 -d 0 ($p + ".miGeoShader")`))
+                continue;
+            $prxMesh[size($prxMesh)] = $item;
+        }
+    }
+
+        if(size($mrMesh)){
+                for($item in $mrMesh){
+                    if (!`getAttr -l ($item + ".displaySmoothMesh")`)
+                        catch(`setAttr ($item + ".displaySmoothMesh") 2`);
+                    saveSetSmooth_C($item + ".smoothLevel");
+                }
+            }
+            
+            print "\n...............................................................................................................\n";
+    //print $mesh;
+    select -r $mesh;
+    
+    select -d $mrMesh $prxMesh;
+    
+    
+    displaySmoothness -divisionsU 3 -divisionsV 3 -pointsWire 16 -pointsShaded 4 -polygonObject 3;
+    if(`getApplicationVersionAsFloat` >= 2015){
+        string $allMesh[] = `ls -type mesh -ni`;
+        for($item in $allMesh){
+            catch(`setAttr ($item + ".useGlobalSmoothDrawType") 0`);
+            catch(`setAttr ($item + ".smoothDrawType") 0`);
+        }
+    }
+    select -cl;
+
+    //force to set char and prop smooth 2 with mr subdiv approx
+    print $char;
+    print "-------------------------------------------------------------------------------------------";
+    string $charProp[] = `ls -typ mesh -ni -ap -dag -l`;
+    print $charProp;
+    string $cpSmtNode[] = {};
+    for($item in $charProp){
+        string $smtNode[] = `listConnections -p 0 -type "mentalraySubdivApprox" $item`;
+        $cpSmtNode = stringArrayCatenate($cpSmtNode, $smtNode);
+    }
+    $cpSmtNode = stringArrayRemoveDuplicates($cpSmtNode);
+    for($item in $cpSmtNode)
+        catch(`setAttr ($item + ".nSubdivisions") 2`);
+
+    string $nurbs[] = `ls -typ nurbsSurface -ni -ap -dag -l -sl`;
+    for($nItem in $nurbs){
+        catch(`setAttr ($nItem + ".explicitTessellationAttributes") 1`);
+        catch(`setAttr ($nItem + ".useChordHeightRatio") 1`);
+        catch(`setAttr ($nItem + ".smoothEdgeRatio") 0.999`);
+        catch(`setAttr ($nItem + ".smoothEdge") 1`);
+        catch(`setAttr ($nItem + ".smoothEdgeRatio") 0.999`);
+    }
+
+    string $subdiv[] = `ls -typ subdiv -ni -ap -dag -l -sl`;
+    for($sItem in $subdiv){
+        catch(`setAttr ($sItem + ".format") 0`);
+        catch(`setAttr ($sItem + ".depth") 2`);
+        catch(`setAttr ($sItem + ".sampleCount") 4`);
+    }
+    
+}
+
+
+
+
+
+
+
+
+global proc int saveSetSmooth_C(string $attr) {
+    string     $conn[]     = `listConnections -s 1 -d 0 $attr`;
+    if(size($conn)){
+        string $node = `nodeType $conn[0]`;
+        if(`gmatch $node "animCurve*"`){
+            if(!`referenceQuery -inr $conn[0]`)
+                catch(`delete $conn`);
+        }
+    }
+
+    int      $a     = `getAttr $attr`;
+    //print $attr;
+    //print "\n";
+    //print $a;
+    //print "\n";
+
+    if ($a<2) {
+        if (catchQuiet(`setAttr $attr 2`))
+            if ($a<1)
+                if (catchQuiet(`setAttr $attr 1`))
+                    return 0;
+    }
+    return 1;
+}
+
+
+
+
+
+
+
